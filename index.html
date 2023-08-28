@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIGITAL ANAS</title>
+    <title>Business Opportunity</title>
     <style>
         /* CSS Reset */
         * {
@@ -18,6 +18,14 @@
             line-height: 1.6;
             color: #333;
             background: linear-gradient(to bottom right, pink, gray);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #35424a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
         }
 
         /* Main Content Styles */
@@ -40,51 +48,65 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const nameSpan = document.getElementById("name");
+            const ageSpan = document.getElementById("age");
+            const stateSpan = document.getElementById("state");
             const decisionSection = document.getElementById("decisionSection");
             const decisionText = document.getElementById("decisionText");
             const videoLink = document.getElementById("videoLink");
             const whatsappLink = document.getElementById("whatsappLink");
 
-            const name = prompt("What's your name?");
-            const age = prompt("What's your age?");
+            const name = prompt("Whats your name?");
+            nameSpan.textContent = name;
+
+            const age = prompt("Whats your age?");
+            ageSpan.textContent = age;
+
             const state = prompt("Where are you living?");
-            
-            const decision = prompt("Do you want to start a business with me? (yes/no)");
+            stateSpan.textContent = state;
+
+            const decision = prompt("Apko mere sath business start karna h? (yes/no)");
 
             if (decision.toLowerCase() === "yes") {
                 decisionSection.style.display = "block";
-                decisionText.innerHTML = "Print <strong>Secret Video To Know How To Earn 50k To 60k Per Month 🤩💓</strong><br><a href='https://youtu.be/FjescNO5KrI' target='_blank'>Watch the Video</a><br><br><em>After Completing this Video Message Me (DONE) 🤝🥳</em>";
+                decisionText.textContent = "𝗦𝗲𝗰𝗿𝗲𝘁 𝗩𝗶𝗱𝗲𝗼 𝗧𝗼 𝗞𝗻𝗼𝘄 𝗧𝗵𝗮𝘁 𝗛𝗼𝘄 𝗧𝗼 𝗘𝗮𝗿𝗻 𝟱𝟬𝗸 𝗧𝗼 𝟲𝟬𝗸 𝗣𝗲𝗿 𝗠𝗼𝗻𝘁𝗵 🤩💓";
                 videoLink.style.display = "block";
                 videoLink.href = "https://youtu.be/FjescNO5KrI";
-                whatsappLink.style.display = "block";
-                whatsappLink.href = "https://wa.link/0bap8q";
             } else {
                 decisionText.textContent = "Bye no more!";
+            }
+
+            const whatsappDecision = prompt("Apko message karke join karna hai kya? (yes/no)");
+
+            if (whatsappDecision.toLowerCase() === "yes") {
+                whatsappLink.style.display = "block";
+                whatsappLink.href = "https://wa.link/0bap8q";
             }
         });
     </script>
 </head>
 <body>
+    <header>
+        <h1>Business Opportunity</h1>
+    </header>
     <main>
         <section>
-            <h2>DIGITAL ANAS</h2>
-            <p>What's your name: <span id="name"></span></p>
-            <p>What's your age: <span id="age"></span></p>
-            <p>Where are you living: <span id="state"></span></p>
+            <h2>Your Information</h2>
+            <p>Name: <span id="name"></span></p>
+            <p>Age: <span id="age"></span></p>
+            <p>State: <span id="state"></span></p>
         </section>
         <section id="decisionSection" style="display: none;">
-            <h2>Your Decision</h2>
+            <h2>Decision</h2>
             <p id="decisionText"></p>
             <a href="#" id="videoLink" style="display: none;">Watch Video</a>
-            <a href="#" id="whatsappLink" style="display: none;">Contact Me on WhatsApp</a>
+            <a href="#" id="whatsappLink">Contact Me on WhatsApp</a>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 DIGITAL ANAS. All rights reserved.</p>
+        <p>&copy; 2023 Business Opportunity. All rights reserved.</p>
     </footer>
     <p>Nice to meet you</p>
-    <p>After watching the video, let me know your decision here:</p>
-    <a href="https://wa.link/0bap8q">Submit Your Decision on WhatsApp</a>
 </body>
 </html>
 
