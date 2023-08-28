@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL ANAS</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom right, pink, gray);
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #35424a;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const decisionSection = document.getElementById("decisionSection");
+            const decisionText = document.getElementById("decisionText");
+            const videoLink = document.getElementById("videoLink");
+            const whatsappLink = document.getElementById("whatsappLink");
+
+            const name = prompt("What's your name?");
+            const age = prompt("What's your age?");
+            const state = prompt("Where are you living?");
+            
+            const decision = prompt("Do you want to start a business with me? (yes/no)");
+
+            if (decision.toLowerCase() === "yes") {
+                decisionSection.style.display = "block";
+                decisionText.innerHTML = "Print <strong>Secret Video To Know How To Earn 50k To 60k Per Month 🤩💓</strong><br><a href='https://youtu.be/FjescNO5KrI' target='_blank'>Watch the Video</a><br><br><em>After Completing this Video Message Me (DONE) 🤝🥳</em>";
+                videoLink.style.display = "block";
+                videoLink.href = "https://youtu.be/FjescNO5KrI";
+                whatsappLink.style.display = "block";
+                whatsappLink.href = "https://wa.link/0bap8q";
+            } else {
+                decisionText.textContent = "Bye no more!";
+            }
+        });
+    </script>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>DIGITAL ANAS</h2>
+            <p>What's your name: <span id="name"></span></p>
+            <p>What's your age: <span id="age"></span></p>
+            <p>Where are you living: <span id="state"></span></p>
+        </section>
+        <section id="decisionSection" style="display: none;">
+            <h2>Your Decision</h2>
+            <p id="decisionText"></p>
+            <a href="#" id="videoLink" style="display: none;">Watch Video</a>
+            <a href="#" id="whatsappLink" style="display: none;">Contact Me on WhatsApp</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 DIGITAL ANAS. All rights reserved.</p>
+    </footer>
+    <p>Nice to meet you</p>
+    <p>After watching the video, let me know your decision here:</p>
+    <a href="https://wa.link/0bap8q">Submit Your Decision on WhatsApp</a>
+</body>
+</html>
+
